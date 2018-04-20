@@ -11,23 +11,17 @@
       height: 100%;
       margin: 0;
       padding: 0;
+      display: table;
     }
     #myDiv{
-      left:50%;
-      top: 50%;
-      border: 1px solid black;
-      position: absolute;
-      background-color: red;
-      color: blue;
-      -webkit-transform:translate(-50%,-50%);
-      transform:translate(-50%,-50%);
-      background: url('./img/images.jpg') no-repeat center fixed;
-      height: 160px;
-      width: 160px;
+      display: table-cell;
+      /* background: url('./img/images.jpg') no-repeat center fixed; */
+      vertical-align: middle;
+      text-align: center;
     }
   </style>
 </head>
 <body>
-  <div id="myDiv"></div>
+  <div id="myDiv">Hello All</div>
 </body>
 </html>
