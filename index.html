@@ -1,27 +1,53 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
   <title>Center Align Div</title>
   <style rel="screansheet" type="text/css">
-    html,body{
+    html,
+    body {
       width: 100%;
       height: 100%;
       margin: 0;
       padding: 0;
-      display: table;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
     }
-    #myDiv{
-      display: table-cell;
-      /* background: url('./img/images.jpg') no-repeat center fixed; */
-      vertical-align: middle;
-      text-align: center;
+
+    #myDiv {
+      height: 80px;
+      width: 80px;
+      border: 1px solid red;
+      background: blue;
+      display: flex;
+      -webkit-box-align: center;
+      -moz-box-align: center;
+      -ms-flex-align: center;
+      -webkit-align-items: center;
+      align-items: center;
+      -webkit-box-pack: center;
+      -moz-box-pack: center;
+      -ms-flex-pack: center;
+      -webkit-justify-content: center;
+      justify-content: center;
     }
   </style>
 </head>
+
 <body>
   <div id="myDiv">Hello All</div>
 </body>
+
 </html>
