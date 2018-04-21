@@ -1,45 +1,54 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
-  <title>Bootstrap Example</title>
-  <meta charset="utf-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1">
-  <link rel="stylesheet" type="text/css" href="style.css">
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Calculator</title>
+  <style type="text/css">
+    html, body{
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 100%;
+      height: 100%;
+    }
+    .myDiv{
+      border: 1px solid black;
+      width: 200px;
+      height: auto;
+      padding: 10px;
+    }
+    input{
+      margin-top: 20px;
+      width: 200px;
+      border: 1px solid red;
+    }
+    #myOut{
+      border: 1px solid #ccc;
+      padding: 10px;
+      margin: 0 auto;
+      width: 100px;
+    }
+  </style>
 </head>
-
 <body>
-  <div class="container myContainer">
-    <div class="innerDiv">
-      <h2>Vertical (basic) form</h2>
-      <form>
-        <div class="form-group">
-          <label for="email">Email:</label>
-          <input type="email" class="form-control" id="email" placeholder="Enter email" name="email">
-        </div>
-        <div class="form-group">
-          <label for="pwd">Password:</label>
-          <input type="password" class="form-control" id="pwd" placeholder="Enter password" name="pwd">
-        </div>
-        <button type="submit" class="btn btn-default" onclick="myFun()">Submit</button>
-      </form>
-    </div>
+  <div class="myDiv">
+    Add 3 Numbers
+    <input type="number" id="num1" onchange="addNumbers()"><br>
+    <input type="number" id="num2" onchange="addNumbers()"><br>
+    <input type="number" id="num3" onchange="addNumbers()"><br><br><br>
+    <div id="myOut"></div>
   </div>
-  <script type="text/javascript" src="./jquery.min.js"></script>
-  <script type="text/javascript" src="./tether.min.js"></script>
-  <script type="text/javascript" src="./bootstrap.min.js"></script>
   <script type="text/javascript">
-    function myFun() {
-      var x = document.getElementById('email').value;
-      var y = document.getElementById('pwd').value;
-      console.log(x, y);
-      var obj = {
-        "x": x,
-        "y": y
-      };
-      console.log(obj);
-    };
+  function addNumbers(){
+    var v1 = document.getElementById("num1").value;
+    var v2 = document.getElementById('num2').value;
+    var v3 = document.getElementById('num3').value;
+    total = Number(v1) + Number(v2) + Number(v3);
+    console.log(total);
+    document.getElementById("myOut").innerHTML = 'SUM=='+total;
+  };
   </script>
 </body>
-
 </html>
