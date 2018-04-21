@@ -1,30 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Calculator</title>
+  <title>3 Input Adder</title>
   <style type="text/css">
-    html, body{
+    html,
+    body {
       display: flex;
       align-items: center;
       justify-content: center;
       width: 100%;
       height: 100%;
     }
-    .myDiv{
+
+    .myDiv {
       border: 1px solid black;
       width: 200px;
       height: auto;
       padding: 10px;
     }
-    input{
+
+    input {
       margin-top: 20px;
       width: 200px;
       border: 1px solid red;
     }
-    #myOut{
+
+    #myOut {
       border: 1px solid #ccc;
       padding: 10px;
       margin: 0 auto;
@@ -32,6 +37,7 @@
     }
   </style>
 </head>
+
 <body>
   <div class="myDiv">
     Add 3 Numbers
@@ -41,14 +47,15 @@
     <div id="myOut"></div>
   </div>
   <script type="text/javascript">
-  function addNumbers(){
-    var v1 = document.getElementById("num1").value;
-    var v2 = document.getElementById('num2').value;
-    var v3 = document.getElementById('num3').value;
-    total = Number(v1) + Number(v2) + Number(v3);
-    console.log(total);
-    document.getElementById("myOut").innerHTML = 'SUM=='+total;
-  };
+    function addNumbers() {
+      var v1 = document.getElementById("num1").value;
+      var v2 = document.getElementById('num2').value;
+      var v3 = document.getElementById('num3').value;
+      total = Number(v1) + Number(v2) + Number(v3);
+      console.log(total);
+      document.getElementById("myOut").innerHTML = 'SUM==' + total;
+    };
   </script>
 </body>
+
 </html>
